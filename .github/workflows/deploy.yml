@@ -1,10 +1,12 @@
 name: Deploy to GitHub Pages
 
-# Builds the static export and publishes it to GitHub Pages on every push to main.
-# Enable it once under: Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
+# Primary hosting is Vercel, which deploys from this repo automatically and needs no
+# workflow. This is kept as a manual fallback only: it never runs on push, so it cannot
+# produce failing builds in the Actions tab.
+#
+# To use it: Settings -> Pages -> Source: GitHub Actions, then run this workflow from the
+# Actions tab. It builds with the repo-name sub-path that Pages requires.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
