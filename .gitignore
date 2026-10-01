@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+
+# env
+.env*
+
+# misc
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tsbuildinfo
+next-env.d.ts
+
+# Source material from the client (brochure PDFs, review images and 150MB of raw video).
+# Everything the site actually uses has been copied into /public — keeping the originals
+# out of git stops the repo ballooning. Remove this line if you want them versioned.
+AALAG/

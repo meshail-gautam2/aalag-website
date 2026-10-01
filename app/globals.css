@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-brand-dark antialiased;
+  }
+
+  /* Anchor targets sit below the sticky navbar. */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-accent/30;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-accent ring-offset-2;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Consistent vertical rhythm: 48px mobile, 80px desktop. */
+  .section-pad {
+    @apply py-12 md:py-20;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg text-sm font-semibold
+      transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-brand-accent px-6 py-3 text-brand-dark shadow-sm hover:bg-brand-accentDark
+      hover:text-white active:scale-[0.98];
+  }
+
+  .btn-dark {
+    @apply btn bg-brand-dark px-6 py-3 text-white hover:bg-brand-dark/90 active:scale-[0.98];
+  }
+
+  .btn-outline {
+    @apply btn border border-white/25 bg-white/5 px-6 py-3 text-white backdrop-blur-sm
+      hover:border-white/50 hover:bg-white/10 active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply btn border border-brand-dark/15 px-6 py-3 text-brand-dark hover:border-brand-dark/30
+      hover:bg-brand-light active:scale-[0.98];
+  }
+
+  .card {
+    @apply rounded-xl border border-brand-dark/5 bg-white shadow-card;
+  }
+
+  .tag {
+    @apply inline-flex items-center gap-1.5 rounded-md bg-brand-light px-2.5 py-1 text-xs
+      font-medium text-brand-muted;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-brand-accentDark;
+  }
+}
+
+@layer utilities {
+  /* Dark hero / footer mesh: layered radial gradients, no imagery. */
+  .bg-brand-mesh {
+    background-color: #1c2b3a;
+    background-image:
+      radial-gradient(900px 500px at 12% -10%, rgba(92, 200, 212, 0.28), transparent 60%),
+      radial-gradient(700px 420px at 88% 8%, rgba(74, 168, 184, 0.22), transparent 62%),
+      radial-gradient(600px 600px at 50% 120%, rgba(92, 200, 212, 0.14), transparent 65%);
+  }
+
+  .bg-grid-faint {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Scroll reveal: hidden until the observer adds .is-visible. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Pointer: a small dot that tracks closely plus a ring that trails behind it and
+   expands over interactive elements. Positions are set per frame in Cursor.tsx;
+   only the size/colour changes transition here.
+
+   The native cursor is deliberately left visible underneath — this is an accent,
+   not a replacement, so nothing is lost if the script fails.
+--------------------------------------------------------------------------- */
+.cur-dot,
+.cur-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  pointer-events: none;
+  border-radius: 50%;
+  will-change: transform;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.cur-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #5cc8d4;
+}
+
+.cur-ring {
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  border: 1px solid rgba(92, 200, 212, 0.5);
+  transition:
+    width 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    height 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    margin 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 250ms ease;
+}
+
+body.cursor-on .cur-dot,
+body.cursor-on .cur-ring {
+  opacity: 1;
+}
+
+/* Over links, buttons and fields: the ring opens up and the dot gets out of the way. */
+body.cur-hot .cur-ring {
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  background: rgba(92, 200, 212, 0.14);
+  border-color: rgba(74, 168, 184, 0.8);
+}
+
+body.cur-hot .cur-dot {
+  opacity: 0;
+}
+
+/* Touch devices and reduced-motion users keep the plain native cursor. */
+@media (hover: none), (pointer: coarse) {
+  .cur-dot,
+  .cur-ring {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cur-dot,
+  .cur-ring {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Course carousel geometry.
+
+   Card widths live in CSS so the first paint is correct at every breakpoint.
+   Every divisor here is a literal number, never a var(): `calc(... / var(--x))`
+   is rejected outright by some browsers, which invalidates the whole
+   declaration — the carousel then updates its state but never visibly moves.
+
+   --peek leaves a sliver of the next card showing, which is what gives the
+   carousel its "cards sliding past" feel. The track's translation is measured
+   and applied in JavaScript (see CourseCarousel.tsx).
+--------------------------------------------------------------------------- */
+.carousel {
+  --gap: 20px;
+  --peek: 44px;
+}
+
+@media (min-width: 640px) {
+  .carousel {
+    --gap: 24px;
+    --peek: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    --gap: 24px;
+    --peek: 48px;
+  }
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* 1 card on mobile, 2 on tablet, 3 on desktop — each minus the peek. */
+.carousel-slide {
+  flex: 0 0 auto;
+  width: calc(100% - var(--peek));
+}
+
+@media (min-width: 640px) {
+  .carousel-slide {
+    width: calc((100% - var(--gap) - var(--peek)) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-slide {
+    width: calc((100% - 2 * var(--gap) - var(--peek)) / 3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Testimonial marquee: one continuous, slow drift. The card list is rendered
+   twice and the track travels exactly -50%, so the loop is seamless.
+--------------------------------------------------------------------------- */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: marquee-drift 52s linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Half the track is the duplicated set, plus one gap to land seamlessly. */
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

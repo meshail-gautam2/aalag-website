@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "core-hr-generalist",
+    "title": "Mastering HR",
+    "subtitle": "From Basics to Strategic Partnership",
+    "shortDescription": "A complete HR Generalist programme, from core functions to strategic business partnering.",
+    "description": "A complete HR Generalist training module covering core HR functions, Indian labour-law compliance, talent acquisition, employee relations, performance management, compensation and benefits, HR analytics, and the soft skills that turn an HR practitioner into a business partner. HR has moved from an administrative back-office function to a seat at the business table, and this programme takes a learner from first principles all the way to strategic HR practice.",
+    "goal": "To equip participants with a comprehensive understanding of core HR functions, legal compliance, best practices and the skills necessary to perform effectively as an HR Generalist.",
+    "duration": "30–40 Hours",
+    "sessions": 20,
+    "parts": 8,
+    "level": "Foundation to Strategy",
+    "category": "HR & Management",
+    "mode": "Online, instructor-led",
+    "accent": "#5CC8D4",
+    "accentTo": "#17303F",
+    "prerequisites": "No prior HR experience required for the foundation parts.",
+    "outcomes": [
+      "Understand the strategic role of HR within an organisation",
+      "Navigate key Indian labour laws and ensure compliance",
+      "Execute effective recruitment and selection processes",
+      "Develop and implement robust onboarding programmes",
+      "Manage employee relations, grievances and disciplinary action",
+      "Run performance management cycles using best practice",
+      "Administer compensation and benefits programmes",
+      "Apply the basics of HR analytics and reporting",
+      "Identify and mitigate common HR risks",
+      "Demonstrate core HR soft skills — communication, empathy, problem-solving"
+    ],
+    "audience": [
+      "Aspiring HR professionals entering the field and building a foundation from scratch",
+      "New HR Generalists in the role and needing end-to-end process confidence",
+      "Experienced HR practitioners refreshing skills and updating on current compliance",
+      "People managers seeking a deeper working understanding of HR functions"
+    ],
+    "modules": [
+      {
+        "title": "The Strategic Role of HR & Foundational Concepts",
+        "lessons": 2,
+        "summary": "Introduction to HR and its evolution from administrative function to business partner; HR structures and models; key HR metrics; ethics; organisational structure and culture; aligning HR with business goals and stakeholder management."
+      },
+      {
+        "title": "HR Compliance & Legal Framework (India specific)",
+        "lessons": 2,
+        "summary": "Factories Act; Industrial Disputes Act; Trade Unions Act; Contract Labour Act; Minimum Wages, Payment of Wages and Bonus Acts; EPF & ESI; POSH Act 2013; Maternity Benefit Act; Gratuity; Apprentices Act; the new Labour Codes and legal record-keeping."
+      },
+      {
+        "title": "Talent Acquisition & Onboarding",
+        "lessons": 3,
+        "summary": "Workforce planning and job analysis; sourcing, ATS, resume screening, structured and behavioural interviewing, assessment centres and offer management; designing pre-boarding through the first 90 days."
+      },
+      {
+        "title": "Employee Relations & Engagement",
+        "lessons": 3,
+        "summary": "Fair treatment and conflict resolution; grievance handling; disciplinary processes and their legal aspects; engagement, internal communication and feedback mechanisms; Diversity, Equity and Inclusion in practice."
+      },
+      {
+        "title": "Performance Management & Development",
+        "lessons": 2,
+        "summary": "SMART goals; appraisal methods including 360-degree, rating scales and BARS; feedback and performance improvement plans; training needs analysis, mentoring, career pathing and measuring L&D return."
+      },
+      {
+        "title": "Compensation & Benefits",
+        "lessons": 2,
+        "summary": "Compensation philosophy and strategy; job evaluation; pay structures and salary bands; CTC, in-hand pay and allowances; EPF, ESI, gratuity and bonus; non-statutory benefits and payroll basics including TDS."
+      },
+      {
+        "title": "HR Operations, Technology & Analytics",
+        "lessons": 3,
+        "summary": "HRIS modules across recruitment, payroll, performance and employee data; data security and privacy; HR metrics and dashboards; turnover and time-to-hire analysis; identifying and mitigating HR risk."
+      },
+      {
+        "title": "Essential Soft Skills & Career Development",
+        "lessons": 3,
+        "summary": "Active listening and empathetic communication; delivering difficult news; presentation and negotiation; case-study problem solving and ethical dilemmas; future trends and the HR Generalist career path."
+      }
+    ],
+    "delivery": [
+      "Lectures and presentations — core concepts and frameworks, trainer-led",
+      "Case studies — real-world HR scenarios for problem solving",
+      "Practical exercises — draft a job description, calculate payroll components, build an onboarding checklist",
+      "Quizzes and assessments at the end of each section",
+      "Guest speakers — experienced HR professionals sharing field insight",
+      "Interactive simulations where the learning platform supports them"
+    ],
+    "assessment": [
+      "Module quizzes after each major part of the curriculum",
+      "Case study analysis — a detailed written analysis of a complex HR problem",
+      "Final project — develop an HR policy, create a recruitment plan, or design an engagement initiative",
+      "Final exam — multiple-choice and short-answer questions",
+      "Certificate of Completion awarded on successful completion of all assessments"
+    ],
+    "instructor": {
+      "name": "AALAG Training Team",
+      "title": "Expert-Led Learning",
+      "bio": "Learn from experienced trainers through structured sessions, practical examples, activities and discussions.",
+      "image": "/instructors/placeholder.jpg"
+    },
+    "thumbnail": "/courses/placeholder.jpg",
+    "brochureUrl": "/brochures/core-hr-generalist.pdf"
+  },
+  {
+    "slug": "power-bi",
+    "title": "Power BI",
+    "subtitle": "From Raw Data to Business Insights",
+    "shortDescription": "Clean data in Power Query, model it properly, write DAX, and publish decision-ready reports.",
+    "description": "A hands-on Power BI training module that takes you from connecting and cleaning data in Power Query, through star-schema modelling and core DAX, to designing decision-ready reports and publishing and securing them in the Power BI Service. Data is only useful when people can act on it, so this module follows the full Power BI workflow — raw data to report to share — and learners finish able to build a complete, trustworthy reporting solution rather than a collection of isolated skills.",
+    "goal": "By the end, learners can clean data in Power Query, build a sound star-schema model, write core DAX measures, design decision-ready reports, and publish and secure them in the Power BI Service.",
+    "duration": "30–40 Hours",
+    "sessions": 20,
+    "parts": 8,
+    "level": "Beginner to Intermediate",
+    "category": "Data, Analytics & Automation",
+    "mode": "Online, instructor-led",
+    "accent": "#E3A648",
+    "accentTo": "#1E2B3C",
+    "prerequisites": "Basic Excel (formulas, pivot tables). No coding needed. Power BI Desktop is free; a Pro or trial licence is needed for the sharing sessions.",
+    "outcomes": [
+      "Connect to Excel, CSV, SQL, web and SharePoint, then clean and combine data in Power Query",
+      "Build a sound star schema with relationships, date tables and hierarchies",
+      "Write core DAX — measures, CALCULATE, time intelligence, variables and ranking",
+      "Choose the right visual and lay out a one-page storytelling report",
+      "Publish, schedule refresh and secure reports with row-level security",
+      "Deliver an end-to-end capstone solution and present it"
+    ],
+    "audience": [
+      "Analysts building reports and analysis for the business",
+      "MIS, finance, HR and operations professionals who report on their own function",
+      "Students building a job-ready data and reporting skill set",
+      "Managers who use dashboards and want to understand them"
+    ],
+    "modules": [
+      {
+        "title": "Foundations",
+        "lessons": 2,
+        "summary": "BI concepts and the Power BI ecosystem — Desktop vs Service vs Mobile; interface tour and a first report connecting to Excel or CSV. Activity: explore a sample report and list the business questions it answers."
+      },
+      {
+        "title": "Getting and Cleaning Data (Power Query)",
+        "lessons": 3,
+        "summary": "Connecting to Excel, CSV, folders, SQL, web and SharePoint; data types, split, replace, fill, pivot and unpivot; append vs merge, parameters and an introduction to M code. Activity: clean a deliberately messy sales file."
+      },
+      {
+        "title": "Data Modelling",
+        "lessons": 3,
+        "summary": "Star schema — fact and dimension tables and why flat files cause problems; cardinality, filter direction and inactive relationships; date tables and drill hierarchies. Activity: turn a flat file into a working star schema."
+      },
+      {
+        "title": "DAX",
+        "lessons": 4,
+        "summary": "Calculated columns vs measures; SUM, COUNT, DIVIDE and IF; filter context and CALCULATE; time intelligence for YTD, MTD and YoY; VAR, SUMX, RANKX and TOPN. Activity: build a KPI set for revenue, margin, growth and top products."
+      },
+      {
+        "title": "Visualisation and Report Design",
+        "lessons": 3,
+        "summary": "Choosing the right visual and when not to use pie charts; themes, colour, alignment and one-page layout; slicers, cross-filtering, drill-through, bookmarks and tooltips. Activity: redesign a cluttered report into a clean executive dashboard."
+      },
+      {
+        "title": "Power BI Service and Governance",
+        "lessons": 3,
+        "summary": "Workspaces, apps and permissions; scheduled refresh, gateways and row-level security; dashboards, pinned tiles, alerts, subscriptions, Q&A and the mobile view."
+      },
+      {
+        "title": "Performance and Advanced Topics",
+        "lessons": 1,
+        "summary": "Import vs DirectQuery, Performance Analyzer, reducing model size, incremental refresh, and an overview of Copilot features."
+      },
+      {
+        "title": "Capstone",
+        "lessons": 1,
+        "summary": "Each learner or team builds an end-to-end solution — data, model, DAX, report, published and secured — and presents it in ten minutes with feedback."
+      }
+    ],
+    "delivery": [
+      "Practice on Microsoft's Contoso or Adventure Works sample data",
+      "Plus one real business file brought by each learner",
+      "Every part ends with a practical build",
+      "Live, instructor-led online sessions"
+    ],
+    "assessment": [
+      "Part quizzes — a short quiz after each part",
+      "Hands-on assignments for Parts 2 to 5",
+      "Capstone scored on data quality, model design, DAX accuracy, visual clarity and storytelling",
+      "Completion certificate, plus a bridge to the Microsoft PL-300 (Power BI Data Analyst) exam"
+    ],
+    "instructor": {
+      "name": "AALAG Training Team",
+      "title": "Expert-Led Learning",
+      "bio": "Learn from experienced trainers through structured sessions, practical examples, activities and discussions.",
+      "image": "/instructors/placeholder.jpg"
+    },
+    "thumbnail": "/courses/placeholder.jpg",
+    "brochureUrl": "/brochures/power-bi.pdf"
+  },
+  {
+    "slug": "microsoft-excel",
+    "title": "Microsoft Excel",
+    "subtitle": "From Basics to Intermediate",
+    "shortDescription": "Build confident, practical spreadsheet skills, one session at a time.",
+    "description": "Microsoft Excel is the everyday tool of offices, finance teams, small businesses and classrooms. This online programme takes you from opening your first workbook to building formulas, tables, charts and a complete mini-project, in clear, practical steps with hands-on practice in every session.",
+    "goal": "Take learners from their first workbook to a complete, presentable business workbook built from scratch.",
+    "duration": "30–40 Hours",
+    "sessions": 20,
+    "parts": 8,
+    "level": "Beginner to Intermediate",
+    "category": "Data, Analytics & Automation",
+    "mode": "Online, live delivery",
+    "accent": "#43B183",
+    "accentTo": "#10322C",
+    "prerequisites": "A laptop or desktop with Microsoft Excel installed and a stable internet connection. No prior Excel experience required — if you can use a computer, you can start.",
+    "outcomes": [
+      "Create, organise, save and share professional workbooks",
+      "Enter and format data quickly with AutoFill, Flash Fill and number formats",
+      "Turn raw lists into tables and answer questions with sort and filter",
+      "Build formulas and use functions such as SUM, IF, ROUND and lookups",
+      "Present results with clear charts, sparklines and conditional formatting",
+      "Complete a real, end-to-end mini-project in Excel"
+    ],
+    "audience": [
+      "Students and fresh graduates preparing for their first job",
+      "Office staff, admin, HR, finance and operations professionals",
+      "Small business owners tracking sales, stock and expenses",
+      "Anyone who has used Excel casually and wants proper, structured skills"
+    ],
+    "modules": [
+      {
+        "title": "Getting Started with Excel",
+        "lessons": 2,
+        "summary": "Understand what a workbook is, open and create files, and save your work safely."
+      },
+      {
+        "title": "The Ribbon and Navigation",
+        "lessons": 2,
+        "summary": "Find every tool quickly by understanding the Ribbon, formula bar, Name Box and navigation shortcuts."
+      },
+      {
+        "title": "Managing Your Worksheets",
+        "lessons": 2,
+        "summary": "Add, rename, reorder and delete sheet tabs, then organise and protect multi-sheet workbooks the way professionals do."
+      },
+      {
+        "title": "Entering and Formatting Data",
+        "lessons": 3,
+        "summary": "Enter, edit and fill data; column width, wrap text and cell styles; number formatting that makes worksheets easy to read."
+      },
+      {
+        "title": "Organising Data with Tables, Sort and Filter",
+        "lessons": 2,
+        "summary": "Turn plain ranges into Excel Tables and find answers by sorting and filtering."
+      },
+      {
+        "title": "Calculations and Functions",
+        "lessons": 4,
+        "summary": "AutoSum and Quick Analysis; formulas and cell references; the Function Library and Insert Function; logical and lookup functions."
+      },
+      {
+        "title": "Charts and Visual Analysis",
+        "lessons": 3,
+        "summary": "Build and customise your first chart, then add sparklines, conditional formatting and a PivotTable preview."
+      },
+      {
+        "title": "Saving, Sharing and Capstone",
+        "lessons": 2,
+        "summary": "Share and present your work with confidence, then apply everything in a final capstone project."
+      }
+    ],
+    "delivery": [
+      "Learn by doing — every session includes at least two practical activities in Excel",
+      "Clear objectives — each session opens with what you will be able to do by the end",
+      "Quick check — a short understanding check closes every session",
+      "Real scenarios — budgets, sales lists, invoices and reports rather than abstract exercises",
+      "Capstone — finish by building and presenting your own business workbook"
+    ],
+    "assessment": [
+      "Session understanding checks throughout the programme",
+      "Practical activities in every session",
+      "Capstone mini-project — build and present your own business workbook",
+      "Certificate of Completion"
+    ],
+    "instructor": {
+      "name": "AALAG Training Team",
+      "title": "Expert-Led Learning",
+      "bio": "Learn from experienced trainers through structured sessions, practical examples, activities and discussions.",
+      "image": "/instructors/placeholder.jpg"
+    },
+    "thumbnail": "/courses/placeholder.jpg",
+    "brochureUrl": "/brochures/microsoft-excel.pdf"
+  },
+  {
+    "slug": "ms-office",
+    "title": "Mastering MS Office",
+    "subtitle": "From Computer Basics to Professional Productivity",
+    "shortDescription": "One course. Every office skill you need — computer basics, Word, Excel and PowerPoint.",
+    "description": "From switching on a computer to presenting a polished business report, this course takes you step by step through computer fundamentals, Microsoft Word, Excel and PowerPoint. Every session is hands-on, using real office files, so you learn by doing.",
+    "goal": "Build complete, practical confidence across the everyday office toolkit, ending in a capstone project.",
+    "duration": "30–40 Hours",
+    "sessions": 20,
+    "parts": 8,
+    "level": "Beginner Friendly",
+    "category": "Productivity & Digital Skills",
+    "mode": "100% Online, live",
+    "accent": "#5B8DEF",
+    "accentTo": "#1B2A41",
+    "prerequisites": "None. Designed for complete beginners, including career restarters. Microsoft Office or Microsoft 365 required.",
+    "outcomes": [
+      "Work confidently across Windows, files, internet, email and cloud storage",
+      "Format professional documents in Word with styles, tables, TOC and track changes",
+      "Run Mail Merge and export a polished resume to PDF",
+      "Use Excel formulas including IF, SUMIFS and XLOOKUP, plus charts and PivotTables",
+      "Design and deliver PowerPoint presentations using Slide Master, animation and media",
+      "Work across Office and OneDrive, and complete a capstone project"
+    ],
+    "audience": [
+      "Students and fresh graduates",
+      "Job seekers building a resume",
+      "Office staff and small-business owners",
+      "Career restarters and beginners"
+    ],
+    "modules": [
+      {
+        "title": "Computer Fundamentals",
+        "lessons": 3,
+        "summary": "Software, Windows and file management; internet, email and cloud storage; online safety and typing skills."
+      },
+      {
+        "title": "Word: Foundations",
+        "lessons": 3,
+        "summary": "Formatting, page layout, tables, pictures and shapes."
+      },
+      {
+        "title": "Word: Professional",
+        "lessons": 2,
+        "summary": "Styles, table of contents, track changes, Mail Merge and building a resume."
+      },
+      {
+        "title": "Excel: Foundations",
+        "lessons": 3,
+        "summary": "Data entry, formulas, sorting, filters and formatting."
+      },
+      {
+        "title": "Excel: Intermediate",
+        "lessons": 3,
+        "summary": "IF, lookups, charts, PivotTables and data validation."
+      },
+      {
+        "title": "PowerPoint: Foundations",
+        "lessons": 2,
+        "summary": "Layouts, visuals, charts and the Slide Master."
+      },
+      {
+        "title": "PowerPoint: Presenting",
+        "lessons": 2,
+        "summary": "Animation, media, storytelling and confident delivery."
+      },
+      {
+        "title": "Integration and Capstone",
+        "lessons": 2,
+        "summary": "Working across Office applications, OneDrive, and the final capstone project."
+      }
+    ],
+    "delivery": [
+      "Hands-on every session, using real office files",
+      "Four applications covered in one structured programme",
+      "Practice files and shortcut cheat sheets provided",
+      "Live online delivery"
+    ],
+    "assessment": [
+      "Tests throughout the programme",
+      "A completed capstone project",
+      "AALAG Certificate of Completion"
+    ],
+    "instructor": {
+      "name": "AALAG Training Team",
+      "title": "Expert-Led Learning",
+      "bio": "Learn from experienced trainers through structured sessions, practical examples, activities and discussions.",
+      "image": "/instructors/placeholder.jpg"
+    },
+    "thumbnail": "/courses/placeholder.jpg",
+    "brochureUrl": "/brochures/ms-office.pdf"
+  }
+]

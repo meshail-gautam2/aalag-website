@@ -1,0 +1,14 @@
+# Normalise line endings for text, but never touch binaries — line-ending conversion
+# corrupts PDFs and images.
+* text=auto eol=lf
+
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.mp4   binary
+*.woff  binary
+*.woff2 binary
