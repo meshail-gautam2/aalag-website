@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
 import LearningApproach from '@/components/LearningApproach';
 import SectionHeading from '@/components/SectionHeading';
+import SectionRail from '@/components/SectionRail';
 import ServicesSection from '@/components/ServicesSection';
 import Testimonials from '@/components/Testimonials';
 import TopicTicker from '@/components/TopicTicker';
@@ -16,6 +17,7 @@ import { courses } from '@/lib/courses';
 export default function HomePage() {
   return (
     <>
+      <SectionRail />
       <Hero />
       <TopicTicker />
       <AboutSection />
