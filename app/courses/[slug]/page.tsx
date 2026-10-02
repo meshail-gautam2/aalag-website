@@ -14,6 +14,7 @@ import {
   PlayCircle,
 } from 'lucide-react';
 
+import Aurora from '@/components/Aurora';
 import CourseCard from '@/components/CourseCard';
 import CourseDetailTabs from '@/components/CourseDetailTabs';
 import GradientPlaceholder from '@/components/GradientPlaceholder';
@@ -61,7 +62,8 @@ export default function CourseDetailPage({ params }: PageProps) {
   return (
     <>
       {/* Hero banner */}
-      <section className="bg-brand-mesh relative isolate overflow-hidden">
+      <section className="bg-brand-mesh grain relative isolate overflow-hidden">
+        <Aurora variant="soft" />
         <div aria-hidden="true" className="bg-grid-faint absolute inset-0 opacity-60" />
 
         <div className="container-page relative py-12 md:py-16">

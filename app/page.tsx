@@ -9,6 +9,7 @@ import LearningApproach from '@/components/LearningApproach';
 import SectionHeading from '@/components/SectionHeading';
 import ServicesSection from '@/components/ServicesSection';
 import Testimonials from '@/components/Testimonials';
+import TopicTicker from '@/components/TopicTicker';
 import WhyAalag from '@/components/WhyAalag';
 import { courses } from '@/lib/courses';
 
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <TopicTicker />
       <AboutSection />
 
       <section id="courses" className="section-pad bg-brand-light">

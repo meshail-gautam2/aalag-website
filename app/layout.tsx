@@ -6,6 +6,7 @@ import Cursor from '@/components/Cursor';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import ScrollProgress from '@/components/ScrollProgress';
 import { SITE } from '@/lib/site';
 
 import './globals.css';
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
 
+        <ScrollProgress />
         <Navbar />
         <main>{children}</main>
         <Footer />

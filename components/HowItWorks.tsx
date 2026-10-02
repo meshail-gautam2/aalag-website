@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
+import Aurora from '@/components/Aurora';
 import SectionHeading from '@/components/SectionHeading';
 import { SITE } from '@/lib/site';
 
@@ -52,8 +53,9 @@ export default function HowItWorks() {
           ))}
         </ol>
 
-        <div className="reveal mt-12 overflow-hidden rounded-2xl bg-brand-dark p-8 sm:p-10">
-          <div className="grid items-center gap-6 lg:grid-cols-[1.4fr_1fr]">
+        <div className="reveal grain relative isolate mt-12 overflow-hidden rounded-2xl bg-brand-dark p-8 sm:p-10">
+          <Aurora variant="soft" />
+          <div className="relative grid items-center gap-6 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <h3 className="font-heading text-2xl font-extrabold text-white sm:text-3xl">
                 Ready to Start Learning?

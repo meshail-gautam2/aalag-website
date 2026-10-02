@@ -18,7 +18,15 @@ export default function SectionHeading({
   return (
     <div className={`reveal max-w-2xl ${isCenter ? 'mx-auto text-center' : ''}`}>
       {eyebrow && (
-        <p className={tone === 'light' ? 'eyebrow text-brand-accent' : 'eyebrow'}>{eyebrow}</p>
+        <p
+          className={`flex items-center gap-2.5 ${isCenter ? 'justify-center' : ''} ${
+            tone === 'light' ? 'eyebrow text-brand-accent' : 'eyebrow'
+          }`}
+        >
+          <span aria-hidden="true" className="h-px w-6 bg-brand-accent/60" />
+          {eyebrow}
+          {isCenter && <span aria-hidden="true" className="h-px w-6 bg-brand-accent/60" />}
+        </p>
       )}
       <h2
         className={`mt-3 text-3xl font-extrabold sm:text-4xl ${

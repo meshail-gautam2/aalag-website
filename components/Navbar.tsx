@@ -49,7 +49,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="rounded-md px-3.5 py-2 text-sm font-medium text-brand-muted transition-colors hover:bg-brand-light hover:text-brand-dark"
+                className="nav-link"
               >
                 {link.label}
               </Link>

@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowRight } from 'lucide-react';
 
+import Aurora from '@/components/Aurora';
 import SectionHeading from '@/components/SectionHeading';
 
 /**
@@ -36,7 +37,8 @@ const PERSONAS = [
 
 export default function LearningApproach() {
   return (
-    <section id="approach" className="bg-brand-mesh section-pad relative isolate overflow-hidden">
+    <section id="approach" className="bg-brand-mesh grain section-pad relative isolate overflow-hidden">
+      <Aurora variant="soft" />
       <div aria-hidden="true" className="bg-grid-faint absolute inset-0 opacity-50" />
 
       <div className="container-page relative">
