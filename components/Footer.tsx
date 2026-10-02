@@ -114,10 +114,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6">
-          <p className="text-center text-xs text-white/40">
+        <div className="mt-12 flex flex-col items-center gap-3 border-t border-white/10 pt-6 sm:flex-row sm:justify-between">
+          <p className="text-center text-xs text-white/40 sm:text-left">
             © 2026 All About Learn And Grow (AALAG). All Rights Reserved.
           </p>
+          <Link
+            href="/privacy"
+            className="text-xs text-white/40 transition-colors hover:text-brand-accent"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
