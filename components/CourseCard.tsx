@@ -1,13 +1,39 @@
 'use client';
 
 import Link from 'next/link';
+import { useRef } from 'react';
+import { useInView } from 'motion/react';
 import { ArrowRight, Clock, Layers, PlayCircle } from 'lucide-react';
 
+import AnimatedNumber from '@/components/AnimatedNumber';
 import GradientPlaceholder from '@/components/GradientPlaceholder';
 import type { Course } from '@/lib/courses';
 import { totalSessions } from '@/lib/courses';
 
+/**
+ * Splits a duration like "30–40 Hours" into its numbers and trailing unit so each figure
+ * can be counted up. Anything that is not a plain range falls back to static text.
+ */
+function parseDuration(duration: string) {
+  const match = duration.match(/^(\d+)\s*[–-]\s*(\d+)\s*(.*)$/);
+  if (match) return { from: Number(match[1]), to: Number(match[2]), unit: match[3] };
+
+  const single = duration.match(/^(\d+)\s*(.*)$/);
+  if (single) return { from: Number(single[1]), to: null, unit: single[2] };
+
+  return null;
+}
+
 export default function CourseCard({ course }: { course: Course }) {
+  const cardRef = useRef<HTMLElement>(null);
+  // One trigger per card, so every figure on it counts together. A low threshold means
+  // the peek card at the edge of the carousel starts counting as soon as it shows,
+  // rather than sitting there with stale numbers.
+  const inView = useInView(cardRef, { once: true, amount: 0.15 });
+
+  const duration = parseDuration(course.duration);
+  const sessions = totalSessions(course);
+
   // Feed the cursor position to the CSS spotlight gradient.
   const onMove = (event: React.MouseEvent<HTMLElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -17,6 +43,7 @@ export default function CourseCard({ course }: { course: Course }) {
 
   return (
     <article
+      ref={cardRef}
       onMouseMove={onMove}
       className="group card spotlight flex h-full flex-col overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-brand-accent/30 hover:shadow-lift"
     >
@@ -51,16 +78,32 @@ export default function CourseCard({ course }: { course: Course }) {
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <span className="tag">
             <Clock size={13} aria-hidden="true" />
-            {course.duration}
+            {duration ? (
+              <>
+                <AnimatedNumber value={duration.from} start={inView} />
+                {duration.to !== null && (
+                  <>
+                    –<AnimatedNumber value={duration.to} start={inView} />
+                  </>
+                )}
+                {duration.unit && <>&nbsp;{duration.unit}</>}
+              </>
+            ) : (
+              course.duration
+            )}
           </span>
+
           <span className="tag">
             <PlayCircle size={13} aria-hidden="true" />
-            {totalSessions(course)} sessions
+            <AnimatedNumber value={sessions} start={inView} />
+            &nbsp;sessions
           </span>
+
           {course.parts && (
             <span className="tag">
               <Layers size={13} aria-hidden="true" />
-              {course.parts} parts
+              <AnimatedNumber value={course.parts} start={inView} />
+              &nbsp;parts
             </span>
           )}
         </div>
