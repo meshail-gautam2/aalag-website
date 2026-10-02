@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 
-import ChatWidget from '@/components/ChatWidget';
+import ChatAgent from '@/components/ChatAgent';
 import Cursor from '@/components/Cursor';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -71,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
+        <ChatAgent />
         <RevealOnScroll />
         <Cursor />
       </body>

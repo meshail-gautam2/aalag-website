@@ -20,7 +20,7 @@ export const SITE = {
   socials: {
     instagram: 'https://instagram.com',
     youtube: 'https://youtube.com',
-    linkedin: 'https://linkedin.com',
+    linkedin: 'https://www.linkedin.com/company/all-about-learn-and-grow/',
   },
 } as const;
 
