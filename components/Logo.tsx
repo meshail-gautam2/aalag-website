@@ -70,14 +70,14 @@ export default function Logo({
         /* Lockup: AALAG, with the full name and the descriptor set small beneath it. */
         <span className="leading-tight">
           <span
-            className={`block font-heading text-base font-extrabold tracking-tight sm:text-lg ${
+            className={`block font-heading text-[1.2rem] font-extrabold leading-none tracking-tight sm:text-[1.4rem] ${
               tone === 'light' ? 'text-white' : 'text-brand-dark'
             }`}
           >
             AALAG
           </span>
           <span
-            className={`block whitespace-nowrap font-heading text-[0.62rem] font-bold leading-snug tracking-tight sm:text-[0.7rem] ${
+            className={`mt-[0.2rem] block whitespace-nowrap font-heading text-[0.56rem] font-bold leading-snug tracking-tight sm:text-[0.63rem] ${
               tone === 'light' ? 'text-brand-accent' : 'text-brand-accentDark'
             }`}
           >
@@ -85,7 +85,7 @@ export default function Logo({
           </span>
           {showDescriptor && (
             <span
-              className={`block whitespace-nowrap text-[0.56rem] font-medium leading-snug sm:text-[0.63rem] ${
+              className={`block whitespace-nowrap text-[0.5rem] font-medium leading-snug sm:text-[0.56rem] ${
                 tone === 'light' ? 'text-white/55' : 'text-brand-muted'
               }`}
             >
