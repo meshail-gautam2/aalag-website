@@ -108,6 +108,7 @@ Each item below is marked with a comment in the code.
 | **Instructor photos** | `components/CourseDetailTabs.tsx` | Trainers are credited as the "AALAG Training Team". Add named trainers and photos to `public/instructors/` when supplied. |
 | **Learner avatars** | `components/Testimonials.tsx` | Reviews are real; the avatars are initials circles because no learner photos were supplied. |
 | **FAQ answers** | `components/FAQ.tsx` | Written from the brief. Confirm fee and instalment wording before launch. |
+| **Privacy policy** | `app/privacy/page.tsx` | States only verified technical facts about the built site plus the client's contact details. It deliberately makes no policy commitments on AALAG's behalf. Before launch the business still needs to supply: registered entity name and address, how long enquiry data is kept, how data-subject requests are handled, governing jurisdiction, and any minimum age. Bump `LAST_UPDATED` when the text changes, and update the "enquiry form" section the moment that form is connected to anything. |
 | **AI chat agent** | `components/ChatWidget.tsx` | The panel body is marked `PLACEHOLDER: Replace with client's AI agent embed script`. Paste the client's embed between the `==== PLACEHOLDER ====` markers and delete the sample transcript and input. |
 | **Contact form** | `components/ContactSection.tsx` | Intentionally not wired up. Point the `<form action>` at Netlify Forms or Formspree, drop `disabled` from the button, and remove the notice line. |
 

@@ -8,12 +8,19 @@ import { SITE } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How All About Learn And Grow (AALAG) handles your information when you use this website or contact us.',
+    'How this website handles information, and how to contact All About Learn And Grow (AALAG).',
 };
 
-/** Shown as "Last updated" — bump this whenever the policy text changes. */
-const LAST_UPDATED = '2 October 2026';
+/** Bump whenever the text below changes. */
+const LAST_UPDATED = '5 October 2026';
 
+/**
+ * Every statement on this page is either a verified technical fact about the built site
+ * or a contact detail supplied by the client. Nothing here is boilerplate, and no policy
+ * commitment is made on AALAG's behalf — retention periods, data-subject rights, the
+ * registered entity and governing law all have to come from the business before they can
+ * be stated. See the README for the list.
+ */
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="reveal mt-10">
@@ -22,6 +29,22 @@ function Section({ title, children }: { title: string; children: React.ReactNode
         {children}
       </div>
     </section>
+  );
+}
+
+function Bullets({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item) => (
+        <li key={item} className="flex gap-2.5">
+          <span
+            aria-hidden="true"
+            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-accent"
+          />
+          {item}
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -51,60 +74,36 @@ export default function PrivacyPage() {
       <section className="section-pad bg-white">
         <div className="container-page max-w-3xl">
           <p className="reveal text-base leading-relaxed text-brand-dark/80">
-            This policy explains what happens to your information when you visit this website or
-            get in touch with <strong>All About Learn And Grow (AALAG)</strong>. We have tried to
-            write it in plain language rather than legal boilerplate.
+            This page describes how this website handles information.
           </p>
 
-          <Section title="The short version">
-            <ul className="space-y-2">
-              {[
-                'This website does not use analytics, advertising or tracking of any kind.',
-                'We set no cookies of our own.',
-                'Fonts are served from this website, not from Google, so visiting does not notify any third party.',
+          <Section title="What this website does not collect">
+            <Bullets
+              items={[
+                'This website contains no analytics, advertising or tracking software.',
+                'This website sets no cookies of its own.',
+                'Fonts are served from this website, so loading a page sends no request to any font provider.',
                 'There are no accounts, logins or payments on this website.',
-                'The only information we hold is what you choose to send us when you contact us.',
-              ].map((item) => (
-                <li key={item} className="flex gap-2.5">
-                  <span
-                    aria-hidden="true"
-                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-accent"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
+              ]}
+            />
           </Section>
 
-          <Section title="Information you give us">
+          <Section title="The enquiry form">
             <p>
-              If you contact us by WhatsApp, phone or email about a course, we receive whatever you
-              choose to send — typically your name, your contact details and what you would like to
-              learn. We use it to answer you, arrange your training and keep in touch about the
-              programme you enrol in.
-            </p>
-            <p>
-              The enquiry form on the contact section is not connected to any service at present.
-              Nothing typed into it is submitted, transmitted or stored anywhere. Please use
-              WhatsApp, phone or email to reach us.
+              The form in the contact section is not connected to any service. It has no
+              destination configured, so anything typed into it is not sent, received or stored.
+              To reach us, please use WhatsApp, phone or email.
             </p>
           </Section>
 
-          <Section title="The AI chat assistant">
+          <Section title="The chat assistant">
             <p>
-              The chat assistant in the corner of the page is provided by{' '}
-              <strong>JotForm</strong>, a third-party service. Conversations with it are processed
-              and stored on JotForm&rsquo;s systems rather than ours, and the assistant tells you
-              in its own window that the chat is recorded.
+              The chat assistant is provided by JotForm and loaded from JotForm&rsquo;s servers.
+              Conversations with it are handled by JotForm, not by this website, and the
+              assistant states in its own window that the chat is recorded.
             </p>
             <p>
-              Please do not share sensitive personal information, identification numbers or payment
-              details with the assistant. If you would prefer not to use it, every question it can
-              answer can also be answered on WhatsApp, by phone or by email.
-            </p>
-            <p>
-              JotForm sets its own cookies or similar storage when the assistant loads. Their
-              handling of that data is governed by{' '}
+              What JotForm does with that data is covered by{' '}
               <a
                 href="https://www.jotform.com/privacy/"
                 target="_blank"
@@ -117,75 +116,25 @@ export default function PrivacyPage() {
             </p>
           </Section>
 
-          <Section title="Technical information">
+          <Section title="Hosting">
             <p>
-              This website is hosted on Vercel. Like any web host, their servers record standard
-              technical details of requests — such as IP address, browser type and the page
-              requested — for security and reliability. We do not add any analytics or tracking on
-              top of this, and we do not build profiles of visitors.
+              This website is hosted by Vercel. As with any web host, their servers record
+              standard technical details of each request.
             </p>
           </Section>
 
           <Section title="Links to other services">
             <p>
-              The site links out to WhatsApp, Instagram, YouTube and LinkedIn. Following those links
-              takes you to services operated by other companies, each with its own privacy policy.
-              We have no control over, and take no responsibility for, how they handle your data.
+              This website links to WhatsApp, Instagram, YouTube and LinkedIn. Following any of
+              those links takes you to a service operated by another company, under that
+              company&rsquo;s own privacy policy.
             </p>
           </Section>
 
-          <Section title="How we use your information">
-            <p>We use what you send us only to:</p>
-            <ul className="space-y-2">
-              {[
-                'Reply to your enquiry and advise you on a suitable course',
-                'Share schedules, fees and enrolment details you have asked for',
-                'Deliver your training and support you through it',
-                'Keep the records we need to run our training programmes',
-              ].map((item) => (
-                <li key={item} className="flex gap-2.5">
-                  <span
-                    aria-hidden="true"
-                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-accent"
-                  />
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <Section title="Contact">
             <p>
-              We do not sell your information, and we do not share it with anyone for marketing
-              purposes.
-            </p>
-          </Section>
-
-          <Section title="How long we keep it">
-            <p>
-              We keep enquiry messages for as long as we need them to respond and to maintain our
-              training records, and no longer than necessary. Chat transcripts are retained by
-              JotForm according to that service&rsquo;s own retention settings. If you would like
-              your information removed, contact us and we will delete what we hold.
-            </p>
-          </Section>
-
-          <Section title="Your choices">
-            <p>
-              You can ask us what information we hold about you, ask us to correct it, or ask us to
-              delete it. Get in touch using any of the methods below and we will deal with your
-              request.
-            </p>
-          </Section>
-
-          <Section title="Changes to this policy">
-            <p>
-              If the website changes in a way that affects your privacy — for example if we connect
-              the enquiry form to a service, or add analytics — we will update this page and change
-              the date at the top.
-            </p>
-          </Section>
-
-          <Section title="Contact us">
-            <p>
-              For anything in this policy, or any request about your information, reach us at:
+              For any question about this page, or about information you have sent us, contact
+              All About Learn And Grow:
             </p>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
