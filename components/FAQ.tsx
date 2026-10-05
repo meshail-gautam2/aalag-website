@@ -27,9 +27,9 @@ const FAQS = [
       'Our published programmes run to 20 sessions across 8 parts, typically 30 to 40 hours of content delivered online over a few weeks. Duration can be set to suit depth, and we also schedule dedicated cohorts for teams.',
   },
   {
-    question: 'Do I get a certificate after completion?',
+    question: 'Do I get a certificate after completing the course?',
     answer:
-      'Yes. A Certificate of Completion is awarded on successful completion of all assessments. The Power BI programme also acts as a bridge toward the Microsoft PL-300 (Power BI Data Analyst) exam.',
+      'Yes. You will receive a course completion certificate after successfully completing the course and meeting the required completion criteria.',
   },
   {
     question: 'Do I need prior experience to start?',
