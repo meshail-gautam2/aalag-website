@@ -62,13 +62,13 @@ export default function Hero() {
           <motion.h1
             variants={rise}
             transition={{ duration: 0.8, ease }}
-            className="mt-6 text-[2.6rem] font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4rem]"
+            className="hero-title mt-6 font-extrabold leading-[1.06] tracking-tight text-white"
           >
-            Build Skills.
-            <br />
-            Build Confidence.
-            <br />
-            <span className="bg-gradient-to-r from-brand-accent via-[#8BE0E8] to-brand-accent bg-clip-text text-transparent">
+            {/* Each line is its own block and never wraps — the fluid size in
+                .hero-title is tuned so the longest line always fits. */}
+            <span className="block whitespace-nowrap">Build Skills.</span>
+            <span className="block whitespace-nowrap">Build Confidence.</span>
+            <span className="block whitespace-nowrap bg-gradient-to-r from-brand-accent via-[#8BE0E8] to-brand-accent bg-clip-text text-transparent">
               Build Your Future.
             </span>
           </motion.h1>

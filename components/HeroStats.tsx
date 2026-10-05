@@ -63,7 +63,7 @@ function StatValue({
 
   return (
     <div>
-      <div className="font-heading text-3xl font-extrabold text-white sm:text-4xl">
+      <div className="whitespace-nowrap font-heading text-[1.75rem] font-extrabold text-white sm:text-4xl">
         {current.toFixed(decimals)}
         <span className="text-brand-accent">{suffix}</span>
       </div>

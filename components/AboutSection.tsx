@@ -99,7 +99,9 @@ export default function AboutSection() {
             ))}
 
             <div className="reveal rounded-xl bg-brand-dark p-6 text-center sm:p-7">
-              <p className="font-heading text-lg font-bold text-white">{SITE.tagline}</p>
+              <p className="whitespace-nowrap font-heading text-[0.9rem] font-bold text-white sm:text-lg">
+                {SITE.tagline}
+              </p>
               <p className="mt-1 text-sm text-brand-accent">{SITE.descriptor}</p>
             </div>
           </div>

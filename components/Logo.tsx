@@ -22,6 +22,8 @@ type LogoProps = {
   tone?: 'light' | 'dark';
   /** Hide the wordmark and show only the mark. */
   markOnly?: boolean;
+  /** Third line of the lockup. Off in the footer, where the descriptor is already stated. */
+  showDescriptor?: boolean;
   className?: string;
 };
 
@@ -50,7 +52,13 @@ export function LogoMark({ size = 40 }: { size?: number }) {
   );
 }
 
-export default function Logo({ size = 40, tone = 'dark', markOnly = false, className = '' }: LogoProps) {
+export default function Logo({
+  size = 40,
+  tone = 'dark',
+  markOnly = false,
+  showDescriptor = true,
+  className = '',
+}: LogoProps) {
   return (
     <Link
       href="/#home"
@@ -59,21 +67,31 @@ export default function Logo({ size = 40, tone = 'dark', markOnly = false, class
     >
       <LogoMark size={size} />
       {!markOnly && (
+        /* Lockup: AALAG, with the full name and the descriptor set small beneath it. */
         <span className="leading-tight">
           <span
-            className={`block font-heading text-[0.95rem] font-extrabold tracking-tight sm:text-base ${
+            className={`block font-heading text-base font-extrabold tracking-tight sm:text-lg ${
               tone === 'light' ? 'text-white' : 'text-brand-dark'
             }`}
           >
-            All About
+            AALAG
           </span>
           <span
-            className={`block font-heading text-[0.95rem] font-extrabold tracking-tight sm:text-base ${
+            className={`block whitespace-nowrap font-heading text-[0.62rem] font-bold leading-snug tracking-tight sm:text-[0.7rem] ${
               tone === 'light' ? 'text-brand-accent' : 'text-brand-accentDark'
             }`}
           >
-            Learn And Grow
+            All About Learn And Grow
           </span>
+          {showDescriptor && (
+            <span
+              className={`block whitespace-nowrap text-[0.56rem] font-medium leading-snug sm:text-[0.63rem] ${
+                tone === 'light' ? 'text-white/55' : 'text-brand-muted'
+              }`}
+            >
+              An Online EdTech Training Platform
+            </span>
+          )}
         </span>
       )}
     </Link>

@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="container-page py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>
-            <Logo size={44} tone="light" />
+            <Logo size={44} tone="light" showDescriptor={false} />
             <p className="mt-4 font-heading text-sm font-bold text-brand-accent">
               {SITE.tagline}
             </p>

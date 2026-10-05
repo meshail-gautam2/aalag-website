@@ -151,6 +151,31 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Hero headline.
+
+   The three lines are set to never wrap, so the font size has to guarantee the
+   longest of them ("Build Your Future.", 18 characters) fits the column at
+   every width. The clamp below is tuned against measured text widths rather
+   than estimated, and the lg value accounts for the hero being a two-column
+   grid, where the text column is roughly half the container.
+--------------------------------------------------------------------------- */
+.hero-title {
+  font-size: clamp(1.75rem, 8.2vw, 2.6rem);
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: clamp(2.6rem, 8vw, 4rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: clamp(2.9rem, 4.4vw, 3.9rem);
+  }
+}
+
+/* ---------------------------------------------------------------------------
    Atmosphere: slow-drifting colour blobs and a fine grain overlay.
 
    Both are decorative and sit behind content at low opacity. The blobs are
